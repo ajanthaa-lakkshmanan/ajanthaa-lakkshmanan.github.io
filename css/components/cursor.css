@@ -1,0 +1,77 @@
+* {
+    cursor: none !important;
+    caret-color: transparent !important;
+}
+
+input::selection, 
+textarea::selection, 
+[contenteditable]::selection {
+    background: rgba(144, 202, 249, 0.2);
+}
+
+input::-moz-selection, 
+textarea::-moz-selection, 
+[contenteditable]::-moz-selection {
+    background: rgba(144, 202, 249, 0.2);
+}
+
+::selection {
+    background: transparent;
+}
+
+::-moz-selection {
+    background: transparent;
+}
+
+* {
+    cursor: none !important;
+}
+
+.cursor-ring {
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(144, 202, 249, 0.8);
+    border-radius: 100%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease-out, height 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+/* Hover effect */
+.link-hover .cursor-ring {
+    width: 50px;
+    height: 50px;
+    border-color: rgba(144, 202, 249, 0.6);
+}
+
+/* Ctrl press effect */
+.ctrl-pressed .cursor-ring {
+    width: 70px;
+    height: 70px;
+    border-color: rgba(144, 202, 249, 0.4);
+}
+
+/* Hide when inactive */
+.cursor-hidden {
+    opacity: 0;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #90caf9;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64b5f6;
+}
